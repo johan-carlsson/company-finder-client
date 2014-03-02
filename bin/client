@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+require 'company/finder/client'
+require_relative '../config'
+input=ARGV.first.to_s
+response=Company::Finder::Client.find_company_by_name(input)
+puts response
