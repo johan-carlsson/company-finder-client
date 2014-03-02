@@ -37,7 +37,7 @@ describe Client do
     response[0..20].should eql("Unable to parse error")
   end
 
-  it "should handle unkown Expections" do
+  it "should handle unknown Expections" do
     RestClient.stub(:get).and_raise(RuntimeError)
     response=Client.find_company_by_name("Should fail")    
     response[0..20].should eql("Client error: Runtime")
