@@ -1,7 +1,7 @@
 require 'company/finder/client'
 include Company::Finder
 
-SERVER_URL="http://0.0.0.0:3000"
+COMPANY_FINDER_SERVER_URL="http://0.0.0.0:3000"
 
 describe Client do
   it "finds company identity numbers give a name" do

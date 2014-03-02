@@ -18,7 +18,7 @@ module Company
       end
 
       def self.url
-        SERVER_URL+"/find"
+        COMPANY_FINDER_SERVER_URL+"/find"
       end
 
       def self.parse(response)
