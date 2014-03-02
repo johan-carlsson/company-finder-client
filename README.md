@@ -6,7 +6,7 @@ A CLI is also provided.
 Change COMPANY_SERVER_URL in config.rb
     
 Install gem:
-
+    bundle install
     rake install
     
 ## Usage
