@@ -9,7 +9,7 @@ describe Client do
   <identity>123-456</identity>
 </company>
     XML
-    result=Client.parse(response_xml)    
+    result=Client.send(:parse, response_xml)    
     result.should eql("123-456")
   end
 
@@ -19,7 +19,7 @@ describe Client do
   <error>Not found</error>
 </company>
     XML
-    result=Client.parse_error(response_xml)    
+    result=Client.send(:parse_error,response_xml)    
     result.should eql("Not found")
   end
 
@@ -27,7 +27,7 @@ describe Client do
     response_xml=<<-XML
   <NOT_VALID_INPUT>bla bla</NOT_VALID_INPUT>
     XML
-    result=Client.parse_error(response_xml)    
+    result=Client.send(:parse_error,response_xml)    
     result.should eql("Unable to parse error message from client. Response:   <NOT_VALID_INPUT>bla bla</NOT_VALID_INPUT>\n")
   end
 
