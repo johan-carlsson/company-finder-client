@@ -21,5 +21,4 @@ describe Client do
     response[0..20].should eql("Client error: Network")
   end
 
-
 end
