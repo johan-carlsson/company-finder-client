@@ -1,24 +1,23 @@
 # Company::Finder::Client
-
-TODO: Write a gem description
+A simple client to company-finder-server.
+A CLI is also provided.
 
 ## Installation
+Change COMPANY_SERVER_URL in config.rb
+    
+Install gem:
 
-Add this line to your application's Gemfile:
-
-    gem 'company-finder-client'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install company-finder-client
-
+    rake install
+    
 ## Usage
 
-TODO: Write usage instructions here
+    require 'company/finder/client'
+    include Company::Finder
+    Client.find_company_by_name("A company name")
+
+## CLI Usage
+
+    bin/client A company name
 
 ## Contributing
 
@@ -27,3 +26,6 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## TODOs
+* Prevent "rake spec" to run integration specs 
